@@ -46,9 +46,13 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { ZComponentComponent } from './component/z-component/z-component.component';
+import { ZDirectiveDirective } from './directive/z-directive.directive';
+import { ZPipePipe } from './pipe/z-pipe.pipe';
+import { DialogComponent } from './component/dialog/dialog.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ZComponentComponent, ZDirectiveDirective, ZPipePipe, DialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
