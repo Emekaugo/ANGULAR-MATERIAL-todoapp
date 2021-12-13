@@ -46,13 +46,23 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 import { ZComponentComponent } from './component/z-component/z-component.component';
 import { ZDirectiveDirective } from './directive/z-directive.directive';
 import { ZPipePipe } from './pipe/z-pipe.pipe';
 import { DialogComponent } from './component/dialog/dialog.component';
+import { MaterialModule } from './material/material.module';
+import { ToDoListComponent } from './component/to-do-list/to-do-list.component';
 
 @NgModule({
-  declarations: [AppComponent, ZComponentComponent, ZDirectiveDirective, ZPipePipe, DialogComponent],
+  declarations: [
+    AppComponent,
+    ZComponentComponent,
+    ZDirectiveDirective,
+    ZPipePipe,
+    DialogComponent,
+    ToDoListComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -93,7 +103,45 @@ import { DialogComponent } from './component/dialog/dialog.component';
     MatStepperModule,
     MatPaginatorModule,
     MatFormFieldModule,
+
+    MaterialModule,
   ],
+
+  exports: [
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatStepperModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+  ],
+
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,1 +1,14 @@
-<app-dialog></app-dialog>
+<!-- <app-to-do-list></app-to-do-list> -->
+
+<h1>todo list</h1>
+<div>
+  <input type="text" [(ngModel)]="inputValue" placeholder="enter text" />
+  <button (click)="handleClick()" (keydown)="handleKeyDown($event)">add</button>
+  <ul>
+    <li *ngFor="let task of list; let i = index">
+      {{ task.name }}
+      <input type="checkbox" [(ngModel)]="task.isCompleted" />
+      <span (click)="remove(i)">X</span>
+    </li>
+  </ul>
+</div>
